@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_margin="@dimen/_7sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tourist_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@color/color7">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center_vertical"
+                            android:text="Tourist Information"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <ImageView
+                            android:id="@+id/img_tourist_info"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_keyboard_down"
+                            android:tint="@color/colorWhite"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_TouristInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:padding="@dimen/_7sdp">
+
+                        <!--FirstName-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etFirstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="First Name"
+                                    android:text=""
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Last Name-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etLastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Last Name"
+                                    android:text=""
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Mobile No-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etMobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Mobile No"
+                                    android:inputType="number"
+                                    android:maxLength="15"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Email-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEmailId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEmailId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Email Id"
+                                    android:text=""
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--AlongWith-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilAlongWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAlongWith"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Along With"
+                                    android:text=""
+                                    android:inputType="number"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_margin="@dimen/_7sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_booking_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@color/color5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center_vertical"
+                            android:text="Tour Booking Details"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <ImageView
+                            android:id="@+id/img_booking_info"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_keyboard_down"
+                            android:tint="@color/colorWhite"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_BookingInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:padding="@dimen/_7sdp">
+                        <!--Is LTC-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilIsLTC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etIsLTC"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Is LTC"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Sector-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilSector"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etSector"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Sector"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Sub Sector-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilSubSector"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etSubSector"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Sub Sector"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Travel Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTravelType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTravelType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Travel Type"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Tour/Packge name-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTourPackgeName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTourPackgeName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Tour / Packge Name"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <!--Company Name-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilCompanyName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etCompanyName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Company Name"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_margin="@dimen/_7sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_date_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color6"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center_vertical"
+                            android:text="Tour Date Selection"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+                        <ImageView
+                            android:id="@+id/img_date_info"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_keyboard_down"
+                            android:tint="@color/colorWhite" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_DateInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:padding="@dimen/_7sdp">
+
+                        <!--Tour Month-->
+                        <LinearLayout
+                            android:id="@+id/LL_TourMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTourMonth"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTourMonth"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Tour Month"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Tour Date-->
+                        <LinearLayout
+                            android:id="@+id/LL_TourDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTourDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTourDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Tour Date"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txterror"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/colorRed"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="You can not book on this date, kindly contact admin or select other date"
+                            android:visibility="gone"/>
+
+                        <!--Tour Code-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTourCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTourCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Tour Code"
+                                    android:text=""
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Tour Start Date-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTourStartDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTourStartDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Tour Start Date"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Nights-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilNights"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNights"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Nights"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Tour End Date-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTourEndDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTourEndDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Tour End Date"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Speciality Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilSpecialityType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etSpecialityType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Speciality Type"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Room Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilRoomType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etRoomType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Room Type"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Vehicle Sharing for tour cost-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilVehicleSharingTourCost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etVehicleSharingTourCost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Vehicle Sharing for tour cost"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtroomavailable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/green"
+                            android:gravity="right"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text=""
+                            android:visibility="gone"/>
+
+                        <!--NoofRooms-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilNoofRooms"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNoofRooms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="No of Rooms"
+                                    android:text=""
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--NoofSeats-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilNoofSeats"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNoofSeats"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="No of Seats"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Extra Bed-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilExtraBed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etExtraBed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Extra Bed"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Vehicle Sharing-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilVehicleSharing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etVehicleSharing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Vehicle Sharing"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_margin="@dimen/_7sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pax_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color9"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center_vertical"
+                            android:text="Pax Details"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <ImageView
+                            android:id="@+id/img_pax_info"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_keyboard_down"
+                            android:tint="@color/colorWhite" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_PaxInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:padding="@dimen/_7sdp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPAX"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:nestedScrollingEnabled="false"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_3sdp"
+                android:layout_margin="@dimen/_7sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_amount_cal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@color/color3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center_vertical"
+                            android:text="Amount Calculation"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <ImageView
+                            android:id="@+id/img_amount_cal"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_keyboard_down"
+                            android:tint="@color/colorWhite"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/LL_AmountCal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:padding="@dimen/_7sdp">
+
+                        <!--TotalAmount-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTotalAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTotalAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Total Amount"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--TotalExtraCost-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTotalExtraCost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTotalExtraCost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Total Extra Cost (+)"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--DiscountType-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilDiscountType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etDiscountType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/gray"
+                                    android:editable="false"
+                                    android:enabled="true"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Discount Type"
+                                    android:text=""
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--DiscountValue-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilDiscountValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etDiscountValue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Discount Value"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--DiscountAmount-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilDiscountAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etDiscountAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Discount Amount (-)"
+                                    android:text="0"
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Admin Discount Amount-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilAdminDiscountAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAdminDiscountAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Admin Discount Amount (-)"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--TotalDiscountAmount-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTotalDiscountAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTotalDiscountAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Total Discount Amount (-)"
+                                    android:text="0"
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--ServiceCharge-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilServiceCharge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etServiceCharge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Service Charge (+)"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--TotalGST-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTotalGST"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTotalGST"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Total GST (+)"
+                                    android:text=""
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--TotalTCS-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTotalTCS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTotalTCS"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Total TCS (+)"
+                                    android:text=""
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--kasar-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilKasar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etKasar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Kasar (-)"
+                                    android:text="0"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--TotalCost-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilTotalCost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTotalCost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                                    android:drawableTint="@color/colorTransparent"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:hint="Total Cost"
+                                    android:text=""
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:clickable="false"
+                                    android:inputType="textCapCharacters"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/LLcardButtonNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:elevation="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/buttonText"
+                        android:text="SAVE &amp; NEXT"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="@font/poppins_semibold"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

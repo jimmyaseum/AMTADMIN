@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Header and Filter Data-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottomView"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <!--Header-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <TextView
+                    android:id="@+id/tvFilters"
+                    style="@style/TextViewStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/ic_keyboard_arrow_left"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="@string/filters"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/tvClearAll"
+                    style="@style/TextViewStyleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/clear_all"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_14sdp" />
+            </RelativeLayout>
+
+            <View style="@style/DividerHorizontal" />
+
+            <!--List-->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_30sdp">
+
+                    <!--Route voucher No-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Route Voucher No"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtRouteVoucherNo"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <!--Tour Booking No-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Tour Booking No"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtTourBookingNo"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                    <!--Sector-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Sector"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtSector"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:editable="false"
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_arrow_drop_down"
+                            android:drawableTint="@color/gray8"
+                            android:imeOptions="actionNext"
+                            android:background="@drawable/aaa" />
+                    </LinearLayout>
+
+                    <!--Tour-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Tour"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtTour"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:editable="false"
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_arrow_drop_down"
+                            android:drawableTint="@color/gray8"
+                            android:imeOptions="actionNext"
+                            android:background="@drawable/aaa" />
+                    </LinearLayout>
+
+                    <!--Tour Date Code-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Tour Date Code"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtTourDateCode"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:background="@drawable/aaa"
+                            android:inputType="textCapCharacters"/>
+                    </LinearLayout>
+
+                    <!--VehicleType-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Vehicle Type"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtVehicleType"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:background="@drawable/aaa"
+                            android:inputType="textCapCharacters"/>
+                    </LinearLayout>
+
+                    <!--Book By-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Book By"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtBookBy"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:editable="false"
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_arrow_drop_down"
+                            android:drawableTint="@color/gray8"
+                            android:imeOptions="actionNext"
+                            android:background="@drawable/aaa" />
+                    </LinearLayout>
+
+                    <!--Branch-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Branch"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                        <EditText
+                            android:id="@+id/edtBranch"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:editable="false"
+                            android:enabled="true"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:drawableRight="@drawable/ic_arrow_drop_down"
+                            android:drawableTint="@color/gray8"
+                            android:imeOptions="actionNext"
+                            android:background="@drawable/aaa" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <!--Bottom View Buttons - Close and Apply-->
+
+        <LinearLayout
+            android:id="@+id/llBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View style="@style/DividerHorizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvClose"
+                    style="@style/TextViewStyleMedium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/close"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View style="@style/DividerVertical" />
+
+                <TextView
+                    android:id="@+id/tvApply"
+                    style="@style/TextViewStyleMedium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/apply"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">AMT ADMIN</string>
+    <string name="str_dont_have_account">Don\'t have an account?</string>
+    <string name="str_sign_up">Sign Up</string>
+    <string name="str_login">Log In</string>
+    <string name="str_phone_verify">Phone Verification</string>
+    <string name="str_your_phone_number">Your phone number</string>
+    <string name="str_enter_digit">Enter the 4 digit code sent to \nyour phone</string>
+    <string name="str_problem">I have a problem.</string>
+    <string name="str_welcome_back">Hi, Welcome back!</string>
+    <string name="str_forget_password">Forgot your Password No?</string>
+    <string name="str_forgot_msg">Please enter your mobile no. You will \nreceive a OTP to create a new password \nvia mobile number.</string>
+    <string name="str_forget_pass">Forgot Password</string>
+    <string name="str_easy_discover_new_place_and_share_with_friend">Easy Discovering New Places &amp; Share These Between Your Friends</string>
+    <string name="error_failed_to_connect">Failed to connect to server. Try again later.</string>
+    <string name="msg_permission_storage">Application need permission to read photos or documents from device</string>
+
+    <string name="str_msg_wait">Please wait</string>
+    <string name="str_msg_no_internet">No Internet Connection</string>
+    <string name="str_msg_connection_error">Connection Error</string>
+    <string name="msg_no_internet">No Internet Found</string>
+    <string name="msg_oops_something_went_wrong">Oops&#8230; Something \nwent wrong</string>
+    <string name="msg_oops">Oops&#8230;</string>
+    <string name="msg_something_went_wrong">Something went wrong.</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="str_couple_tour">Couple Tours</string>
+    <string name="str_diwali_vacation">Diwali Vacation</string>
+    <string name="str_customized_holidays">Customized Holidays</string>
+    <string name="str_weekend_gateways">Weekend Gateways</string>
+    <string name="str_contact">Contact</string>
+
+    <string name="str_general_info">General Information</string>
+    <string name="str_company">Company Details</string>
+    <string name="str_family_member">Family Members</string>
+    <string name="str_my_voucher">My Vouchers</string>
+    <string name="str_my_document">My Documents</string>
+    <string name="str_my_booking">My Bookings</string>
+    <string name="str_terms_condition">Terms &amp; conditions</string>
+    <string name="str_privacy_policy">Privacy Policy</string>
+    <string name="str_help_center">Help Center</string>
+    <string name="str_about_us">About Us</string>
+    <string name="str_logout">Logout</string>
+
+    <string name="error_empty_mobile_number">Enter mobile number!!</string>
+    <string name="error_valid_mobile_number">Enter valid mobile number!!</string>
+    <string name="error_empty_email">Enter email address!!</string>
+    <string name="error_valid_email">Enter valid email address!!</string>
+    <string name="error_empty_panno">Enter PAN  Number!!</string>
+    <string name="error_valid_panno">Enter valid PAN Number!!</string>
+    <string name="error_valid_aadharno">Enter valid Aadhar Card Number!!</string>
+    <string name="error_valid_passportno">Enter valid PassPort Number!!</string>
+    <string name="error_empty_gstno">Enter GST Number!!</string>
+    <string name="error_valid_gstno">Enter valid GST Number!!</string>
+    <string name="my_story">"The code above will first call the toolbar by its id from the XML layout with the help of the android extension we added in the plugins. It will then tell the Activity that you’d like to use the functionality of the Toolbar.  Similar to when you want to set a title to the toolbar, or you want to add icons in the toolbar by setting the setSupportActionBar(toolbar) method. We can now display the app-name in the toolbar inside the title_backgroud we designed in the drawable resource file.  "</string>
+
+    <string name="str_view_all"><u>View all</u></string>
+    <string name="true_tick">\u2713</string>
+    <string name="str_add_pax"><u>ADD PAX</u></string>
+    <string name="str_add_place"><u>ADD PLACE</u></string>
+    <string name="str_add_room"><u>ADD ROOM</u></string>
+
+    <string name="error_empty_paxtype">Select Pax Type</string>
+    <string name="error_empty_no_of_room">Enter No of Rooms</string>
+
+    <string name="error_empty_place">Select Place</string>
+    <string name="error_empty_night">Enter No of Nights</string>
+    <string name="error_empty_checkin">Select Checkin Date</string>
+    <string name="error_empty_checkout">Select Checkout Date</string>
+    <string name="error_empty_remarks">Enter Remarks</string>
+
+    <string name="filters">Filters</string>
+    <string name="clear_all">Clear All</string>
+    <string name="close">Close</string>
+    <string name="apply">Apply</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="notification_channel_id" translatable="false">Inquiry</string>
+
+    <string name="msg_permission_camera">Application need permission to access camera and read photos or documents from device</string>
+
+</resources>

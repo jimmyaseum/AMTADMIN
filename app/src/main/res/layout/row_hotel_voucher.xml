@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/llStartView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_4sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.3"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Hotel Booking No : "
+                                android:gravity="center_vertical"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/txtHotelBookingNo"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text=""
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_4sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.3"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="TBN : "
+                                android:gravity="center_vertical"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvbookingNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:spanCount="3"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                    tools:listitem="@layout/adapter_tourbooking" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_4sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.3"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Name : "
+                                android:gravity="center_vertical"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/txtName"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text=""
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_4sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.3"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Package Name : "
+                                android:gravity="center_vertical"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/txtPackageName"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text=""
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_4sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.3"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Tour Date Code : "
+                                android:gravity="center_vertical"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/txtTourDateCode"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text=""
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="@dimen/_4sdp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.3"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="No Of Nights : "
+                                android:gravity="center_vertical"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/txtNoOfNights"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/txtReadMore"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Read More"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableTint="#0057DA"
+                            android:drawableRight="@drawable/ic_keyboard_down"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="#0057DA"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="right"/>
+                        <LinearLayout
+                            android:id="@+id/LL_More"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/_4sdp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.3"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Tour Date : "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_10sdp" />
+                                <TextView
+                                    android:id="@+id/txtTourDate"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text=""
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_10sdp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/_4sdp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.3"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Company : "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_10sdp" />
+                                <TextView
+                                    android:id="@+id/txtCompanyName"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text=""
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_10sdp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:visibility="gone">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.3"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Vehicle Sharing : "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_10sdp" />
+                                <TextView
+                                    android:id="@+id/txtVehicleSharing"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text=""
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_10sdp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/_4sdp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.3"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Book By : "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_10sdp" />
+                                <TextView
+                                    android:id="@+id/txtBookBy"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text=""
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_10sdp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.3"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Branch : "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_10sdp"/>
+                                <TextView
+                                    android:id="@+id/txtBranch"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text=""
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_10sdp"/>
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/txtReadLess"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Read Less"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:drawableTint="#0057DA"
+                                android:drawableRight="@drawable/ic_keyboard_up"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textSize="@dimen/_11sdp"
+                                android:textColor="#0057DA"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="right"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_alignParentRight="true"
+                app:cardBackgroundColor="#0057DA"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_medium"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

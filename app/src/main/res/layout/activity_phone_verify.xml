@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:orientation="vertical"
+                android:background="@color/colorgreenish100"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_phone_verify"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_your_phone_number"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/edtMobileNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorgreenish20"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_30sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_enter_digit"
+                    android:textColor="@color/colorLightBlack"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="@dimen/_13sdp"
+                    android:gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_10sdp">
+                        <EditText
+                            android:id="@+id/edtOTP1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorLightGray"
+                            android:textSize="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_semibold" />
+                        <View
+                            android:id="@+id/V_otp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:visibility="gone"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                        <View
+                            android:id="@+id/V_fill_otp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:backgroundTint="@color/colorgreenish100"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_10sdp">
+                        <EditText
+                            android:id="@+id/edtOTP2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorLightGray"
+                            android:textSize="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_semibold" />
+                        <View
+                            android:id="@+id/V_otp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                        <View
+                            android:id="@+id/V_fill_otp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:backgroundTint="@color/colorgreenish100"
+                            android:visibility="gone"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_10sdp">
+                        <EditText
+                            android:id="@+id/edtOTP3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorLightGray"
+                            android:textSize="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_semibold" />
+                        <View
+                            android:id="@+id/V_otp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                        <View
+                            android:id="@+id/V_fill_otp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:backgroundTint="@color/colorgreenish100"
+                            android:visibility="gone"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/edtOTP4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="0"
+                            android:maxLength="1"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:gravity="center"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorLightGray"
+                            android:textSize="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_semibold" />
+                        <View
+                            android:id="@+id/V_otp4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                        <View
+                            android:id="@+id/V_fill_otp4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_5sdp"
+                            android:backgroundTint="@color/colorgreenish100"
+                            android:visibility="gone"
+                            android:background="@drawable/ic_baseline_horizontal"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/LLcardButtonVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/colorgreenish100"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            style="@style/buttonText"
+                            android:textAllCaps="true"
+                            android:text="Verify" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/txttimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Automatically receive OTP in 00:00"
+                    android:textColor="@color/gray8"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_10sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llResend"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Did't receive the verification OTP? "
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_10sdp"/>
+                <TextView
+                    android:id="@+id/txtresend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resend again"
+                    android:textColor="@color/colorgreenish100"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

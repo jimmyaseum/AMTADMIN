@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Couple_Tours"
+            android:icon="@drawable/ic_couple_tour"
+            android:iconTint="@color/colorgreenish20"
+            android:title="@string/str_couple_tour" />
+
+        <item
+            android:id="@+id/nav_Diwali_Vacation"
+            android:visible="false"
+            android:icon="@drawable/ic_diwali_vacation"
+            android:iconTint="@color/colorgreenish20"
+            android:title="@string/str_diwali_vacation" />
+
+        <item
+            android:id="@+id/nav_Customized_Holidays"
+            android:icon="@drawable/ic_customizedholiday"
+            android:iconTint="@color/colorgreenish20"
+            android:title="@string/str_customized_holidays" />
+
+        <item
+            android:id="@+id/nav_Weekend_Gateways"
+            android:icon="@drawable/ic_weekend"
+            android:iconTint="@color/colorgreenish20"
+            android:title="@string/str_weekend_gateways" />
+
+        <item
+            android:id="@+id/nav_Contact"
+            android:icon="@drawable/ic_contact_us"
+            android:iconTint="@color/colorgreenish20"
+            android:title="@string/str_contact" />
+
+    </group>
+
+</menu>

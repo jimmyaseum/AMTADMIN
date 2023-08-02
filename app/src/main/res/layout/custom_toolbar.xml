@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorLightBg"
+            android:textAlignment="center"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Left-->
+                <ImageView
+                    android:id="@+id/tbImgLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:src="@drawable/ic_keyboard_arrow_left"
+                    app:tint="@color/colorBlack" />
+
+                <!--Middle-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <!--Title-->
+
+                    <TextView
+                        android:id="@+id/tbTvTitle"
+                        style="@style/toolBarText"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:text="SAVE"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:textColor="@color/colorgreenish20"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_toLeftOf="@+id/tbImgRight"/>
+
+                <!--Right-->
+                <ImageView
+                    android:id="@+id/tbImgRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_filter"
+                    app:tint="@color/colorBlack"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"/>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+

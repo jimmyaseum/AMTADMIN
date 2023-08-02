@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUserList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Contact Fragment"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/colorAccent"
+        tools:listitem="@layout/adapter_employee"
+        android:fontFamily="@font/poppins_semibold"/>
+
+</RelativeLayout>

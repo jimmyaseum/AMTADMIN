@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_squre"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/txtRoomNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:text="Room No 1"
+            android:gravity="center"
+            android:textColor="@color/gray8"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="@dimen/_13sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPaxInfoInner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:itemCount="3"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

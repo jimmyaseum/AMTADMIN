@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="gray">#5a6773</color>
+    <color name="splash_bg">#282626</color>
+    <color name="lightbg">#f1f3f4</color>
+    <color name="transparent">#00FFFFFF</color>-->
+    <color name="background">#dddddd</color>
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#32BDC8</color>
+    <color name="gray8">#373839</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorYellow100">#FF8900</color>
+    <color name="colorYellow200">#EA7628</color>
+    <color name="colorYellow300">#B15826</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLightBlack">#1E2432</color>
+    <color name="colorLightGray">#C4C4C4</color>
+    <color name="gray">#686868</color>
+    <color name="colortextTitle">#BEC2CE</color>
+    <color name="colorLightBg">#F7F8FA</color>
+    <color name="colorLightBg1">#E5E5E5</color>
+    <color name="colorRed">#d91b11</color>
+    <color name="colortab">#EAECEF</color>
+    <color name="lightbg">#f1f3f4</color>
+
+    <color name="colorgreenish10">#cceff2</color>
+    <color name="colorgreenish20">#0f373a</color>
+    <color name="colorgreenish100">#32BDC8</color>
+    <color name="colorgreenish200">#2DAAB4</color>
+    <color name="colorgreenish300">#2897A0</color>
+    <color name="colorgreenish400">#23848C</color>
+    <color name="colorgreenish500">#5FE4FC</color>
+
+    <color name="green">#007500</color>
+
+    <color name="color1">#E88D89</color>
+    <color name="color2">#51C6C7</color>
+    <color name="color3">#6D82CE</color>
+    <color name="color4">#E9B074</color>
+    <color name="color5">#E5775A</color>
+    <color name="color6">#35937B</color>
+    <color name="color7">#0065A2</color>
+    <color name="color8">#8AC0DE</color>
+    <color name="color9">#BC85A3</color>
+    <color name="color10">#AA7B6F</color>
+
+    <color name="button_blue">#EAF5FC</color>
+    <color name="shadow_blue">#CCEEFF</color>
+    <color name="button_purple">#EDE5FE</color>
+    <color name="shadow_purple">#E1D2FF</color>
+    <color name="button_orange">#F8E6E6</color>
+    <color name="shadow_orange">#EFDFD5</color>
+
+</resources>
