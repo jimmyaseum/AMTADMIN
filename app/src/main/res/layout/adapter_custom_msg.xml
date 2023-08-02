@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/bg_image_fill"
+        android:backgroundTint="@color/background"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/LLReceiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_below="@+id/date"
+        android:layout_marginRight="@dimen/_40sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/receiver_profile_image"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_profile"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_receive">
+
+            <TextView
+                android:id="@+id/receiver_message_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jimmy Patel"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="@dimen/_1sdp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/receiver_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingBottom="@dimen/_1sdp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/receiver_image"
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/img_flight"
+                android:scaleType="fitXY"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/receiver_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/receiver_file"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/pdf_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to open"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/receiver_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/gray"
+                android:text=""
+                android:layout_gravity="right"
+                android:fontFamily="@font/poppins_regular"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LLSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_below="@+id/date"
+        android:layout_marginLeft="@dimen/_40sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_send">
+
+            <TextView
+                android:id="@+id/sender_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sender_image"
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/img_flight"
+                android:scaleType="fitXY"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/sender_pdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1sdp"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/sender_file"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/pdf_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to open"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sender_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/gray"
+                android:text=""
+                android:layout_gravity="right"
+                android:fontFamily="@font/poppins_regular"/>
+
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sender_profile_image"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_profile"/>
+    </LinearLayout>
+
+</RelativeLayout>

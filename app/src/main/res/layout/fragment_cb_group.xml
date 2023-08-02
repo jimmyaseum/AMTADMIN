@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroupList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Group Fragment"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/colorAccent"
+        tools:listitem="@layout/adapter_group"
+        android:fontFamily="@font/poppins_semibold"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

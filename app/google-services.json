@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "216200599840",
+    "firebase_url": "https://amt-admin-default-rtdb.firebaseio.com",
+    "project_id": "amt-admin",
+    "storage_bucket": "amt-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216200599840:android:fac2f39d09153475e59f45",
+        "android_client_info": {
+          "package_name": "com.app.amtadminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216200599840-ip36bg0r8jsnpknkpt6hlrd3n7jq8tip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOJARdPOCxcs2O345Ma9HutGqr-v5czWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216200599840-ip36bg0r8jsnpknkpt6hlrd3n7jq8tip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216200599840:android:a6c0c46269a4f9dae59f45",
+        "android_client_info": {
+          "package_name": "com.app.amtadminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216200599840-ip36bg0r8jsnpknkpt6hlrd3n7jq8tip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOJARdPOCxcs2O345Ma9HutGqr-v5czWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216200599840-ip36bg0r8jsnpknkpt6hlrd3n7jq8tip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
