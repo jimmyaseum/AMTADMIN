@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    tools:context=".activity.Reports.ReportActivity.SelfTourBookingReportActivity"
+    android:paddingBottom="@dimen/_15sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left"
+                app:tint="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/tbTvTitle"
+                style="@style/toolBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/colorLightBlack" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+            <!--Date Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Date Type"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edtDateType"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_weight="1"
+                        android:background="@drawable/aaa"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/colorBlack"
+                        android:editable="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:hint=""
+                        android:inputType="textCapCharacters" />
+                    <ImageView
+                        android:id="@+id/imgclearDT"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:backgroundTint="@color/gray"
+                        android:background="@drawable/ic_circle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--From Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="From Date"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtFromDate"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_weight="1"
+                        android:background="@drawable/aaa"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/gray8"
+                        android:editable="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:hint="" />
+                    <ImageView
+                        android:id="@+id/imgclearFD"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:backgroundTint="@color/gray"
+                        android:background="@drawable/ic_circle" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--To Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="To Date"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtToDate"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_weight="1"
+                        android:background="@drawable/aaa"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/gray8"
+                        android:editable="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:hint="" />
+                    <ImageView
+                        android:id="@+id/imgclearTD"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:backgroundTint="@color/gray"
+                        android:background="@drawable/ic_circle" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Get Details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CardGetDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_8sdp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/colorWhite"
+                        android:text="View Report"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_30sdp"
+                        android:paddingRight="@dimen/_30sdp"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

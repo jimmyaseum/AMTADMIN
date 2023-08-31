@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorLightBg"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/LLRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtRemarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You learned a technique that improves performance on high concurrency queries that involve aggregate values on data. You applied it to scenarios that require a subquery to first do a group by and aggregate, then do an outer query with an order by on the results. You also learned about transactions in Azure Cosmos DB and an SDK feature called transactional batch.
+    Applying these concepts, techniques, and technologies help ensure that your final database design is efficient in terms of compute. This means that it can scale out as either the size of the database grows or the amount of throughput is increased to handle a higher volume of operations."
+                    android:textColor="@color/gray8"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:padding="@dimen/_2sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtRemarksBy"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:text="Remarks By : Nikunj Prajapati"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/_9sdp"
+                    android:padding="@dimen/_2sdp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtRemarksDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Date :10/11/2022"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="@dimen/_9sdp"
+                    android:padding="@dimen/_2sdp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

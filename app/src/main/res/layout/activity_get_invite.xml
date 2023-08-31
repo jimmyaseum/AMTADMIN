@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgreenish100">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_50sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:src="@drawable/img_invite"
+                android:layout_margin="@dimen/_10sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_easy_discover_new_place_and_share_with_friend"
+                android:textColor="@color/colorgreenish20"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@color/colorgreenish20"/>
+                    <EditText
+                        android:id="@+id/edtCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/colorgreenish20"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:text="+ 91"
+                        android:textColor="@color/colorgreenish20"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+                <View
+                    android:visibility="gone"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@color/colorgreenish20"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtMobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter mobile number"
+                    android:textColor="@color/colorgreenish20"
+                    android:textColorHint="@color/colorLightBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_error_mobile_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Enter mobile number"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/_20sdp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

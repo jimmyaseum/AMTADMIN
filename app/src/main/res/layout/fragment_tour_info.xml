@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp">
+
+            <!--Sector-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Sector"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtSector"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa" />
+            </LinearLayout>
+
+            <!--Sub Sector-->
+            <LinearLayout
+                android:id="@+id/ll_sub_sector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Sub Sector"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtSubSector"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa"/>
+            </LinearLayout>
+
+            <!--Tour No-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Tour Booking No"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtTourBookingNo"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa"/>
+            </LinearLayout>
+
+            <!--Tour Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Tour Name"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtTourName"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa"/>
+            </LinearLayout>
+
+            <!--Tour start date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Tour Start Date"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtTourStartDate"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa"/>
+            </LinearLayout>
+
+            <!--Tour end date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Tour End Date"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtTourEndDate"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa"/>
+            </LinearLayout>
+
+            <!--No of Night-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="No of Nights"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtNoN"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa"/>
+            </LinearLayout>
+
+            <!--Room Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Room Type"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtRoomType"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa" />
+            </LinearLayout>
+
+            <!--Vehicle Sharing-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Vehicle Sharing"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtVehicleSharing"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa" />
+            </LinearLayout>
+
+            <!--TotalRooms-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Total Rooms"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtTotalRooms"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa" />
+            </LinearLayout>
+
+            <!--TotalSeats-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Total Seats"
+                    android:textColor="@color/gray8"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <EditText
+                    android:id="@+id/edtTotalSeats"
+                    style="@style/TextViewStyleRegular"
+                    android:text=""
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:background="@drawable/aaa" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/LLcardButtonNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:elevation="@dimen/_10sdp"
+                android:layout_margin="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        style="@style/buttonText"
+                        android:text="Next" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

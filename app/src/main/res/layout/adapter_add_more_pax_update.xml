@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorLightBg"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true"
+                app:elevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/llContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtRoomNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:text="Room No 1"
+                        android:gravity="center"
+                        android:textColor="@color/gray8"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <!--Pax Type-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPaxType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPaxType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:drawableTint="@color/gray"
+                                android:editable="false"
+                                android:enabled="true"
+                                android:focusable="false"
+                                android:fontFamily="@font/poppins_medium"
+                                android:hint="Pax Type"
+                                android:text=""
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPaxInfoInner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:itemCount="3"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                    <TextView
+                        android:id="@+id/tvAddMore"
+                        style="@style/TextViewStyleRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/str_add_room"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_close"
+            android:tint="@color/colorWhite"
+            android:padding="@dimen/_5sdp"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/ic_circle"/>
+    </FrameLayout>
+
+</RelativeLayout>

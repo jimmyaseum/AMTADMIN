@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'android-maven'
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.app.amtadminapp"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 8
+        versionName "1.8"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file("AMT Admin.jks")
+            storePassword "AMTAdmin123"
+            keyAlias "AMTAdmin123"
+            keyPassword "AMTAdmin123"
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    buildTypes {
+        release {
+            debuggable false
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    kapt {
+//        generateStubs = true
+//    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+//    buildFeatures {
+//        viewBinding true
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // android support libraries
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$APP_COMPAT_VERSION"
+    implementation "androidx.core:core-ktx:$CORE_KTX_VERSION"
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VERSION"
+    implementation "androidx.legacy:legacy-support-v4:$LEGACY_SUPPORT_VERSION"
+    implementation "com.google.android.material:material:$MATERIAL_VERSION"
+
+    // dependencies for local unit tests
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    testImplementation "junit:junit:$JUNIT_VERSION"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$ESPRESSO_VERSION"
+    androidTestImplementation "androidx.test:runner:$TEST_RUNNER_VERSION"
+
+    //SDP
+    implementation "com.intuit.sdp:sdp-android:$SDP_VERSION"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$GLIDE_VERSION"
+    implementation "jp.wasabeef:glide-transformations:$GLIDE_TRANSFORM_VERSION"
+
+    // parser
+    implementation "com.google.code.gson:gson:$GSON_VERSION"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    implementation "com.squareup.okhttp3:logging-interceptor:$LOGGING_INTERCEPTOR_VERSION"
+
+    // ViewPagerIndicator
+    implementation('com.github.JakeWharton:ViewPagerIndicator:2.4.1') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+
+    /*Search View*/
+    implementation 'com.github.Ferfalk:SimpleSearchView:0.1.6'
+
+    /*Navigation Drawer*/
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
+
+    /* Circle Image View */
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    /* google service */
+    implementation "com.google.android.gms:play-services-auth-api-phone:16.0.0"
+
+    //Crop Image
+    api "com.theartofdev.edmodo:android-image-cropper:2.8.0"
+
+    //Permission
+    implementation "pub.devrel:easypermissions:3.0.0"
+    implementation 'com.droidninja:filepicker:2.2.5'
+
+    implementation "androidx.palette:palette:1.0.0"
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
+    //chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Chat Firebase
+    implementation 'com.google.firebase:firebase-auth:21.1.0' // 21.1.0
+    implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation "com.google.firebase:firebase-core:21.1.0"
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:6.0.2'
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutinesVersion"
+
+    // Notification Firebase
+    implementation 'com.google.firebase:firebase-analytics:21.1.0'
+
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.1.0'
+//    implementation 'androidx.work:work-runtime-ktx:2.5.0'
+
+    implementation 'org.jsoup:jsoup:1.10.2'
+}

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LL_BookingInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:padding="@dimen/_7sdp">
+
+                <!--Nights/Days-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Tour Booking No"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etTourBookingNo"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/LLcardButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/_30sdp"
+                        android:paddingLeft="@dimen/_30sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            style="@style/buttonText"
+                            android:text="VIEW" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Sector-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Sector"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etSector"
+                            style="@style/TextViewStyleRegular"
+                            android:hint=""
+                            android:editable="false"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:background="@drawable/aaa"
+                            android:drawableRight="@drawable/ic_arrow_drop_down"
+                            android:drawableTint="@color/colorWhite" />
+                </LinearLayout>
+
+                <!--Tour/Packge name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tour / Package Name"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etTourPackgeName"
+                        style="@style/TextViewStyleRegular"
+                        android:hint=""
+                        android:editable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/aaa"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/colorWhite" />
+                </LinearLayout>
+
+                <!--Tour Code-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tour Code"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etTourCode"
+                        style="@style/TextViewStyleRegular"
+                        android:hint=""
+                        android:editable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/aaa"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/colorWhite" />
+                </LinearLayout>
+
+                <!--CompanyName-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Company Name"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etCompanyName"
+                        style="@style/TextViewStyleRegular"
+                        android:hint=""
+                        android:editable="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/aaa"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/gray8" />
+                </LinearLayout>
+
+                <!--TourDate-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Tour Date"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etTourDate"
+                        style="@style/TextViewStyleRegular"
+                        android:hint=""
+                        android:editable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/aaa"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/colorWhite" />
+                </LinearLayout>
+
+                <!--RoomType-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Room Type"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etRoomType"
+                        style="@style/TextViewStyleRegular"
+                        android:hint=""
+                        android:editable="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/aaa"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/gray8" />
+                </LinearLayout>
+
+                <!--Nights/Days-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Nights"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etNights"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Days"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etDays"
+                            style="@style/TextViewStyleRegular"
+                            android:enabled="false"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--TotalAdults-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Total Adults"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etTotalAdults"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                    <!--TotalExtraAdults-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Total Extra Adults"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etTotalExtraAdults"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--TotalChildWB-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Total Child WB"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etTotalChildWB"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                    <!--TotalChildNB-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Total Child NB"
+                            android:textColor="@color/gray8"
+                            android:textSize="@dimen/_13sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"/>
+                        <EditText
+                            android:id="@+id/etTotalChildNB"
+                            style="@style/TextViewStyleRegular"
+                            android:background="@drawable/aaa"
+                            android:inputType="number"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--TotalInfants-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Total Infants"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etTotalInfants"
+                        style="@style/TextViewStyleRegular"
+                        android:background="@drawable/aaa"
+                        android:inputType="number"
+                        android:enabled="false"/>
+                </LinearLayout>
+
+                <!--PickUpPlace-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="PickUp Place"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etPickUpPlace"
+                        style="@style/TextViewStyleRegular"
+                        android:background="@drawable/aaa"
+                        android:enabled="false"
+                        android:inputType="textCapCharacters"/>
+                </LinearLayout>
+
+                <!--DropPlace-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Drop Place"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etDropPlace"
+                        style="@style/TextViewStyleRegular"
+                        android:background="@drawable/aaa"
+                        android:enabled="false"
+                        android:inputType="textCapCharacters"/>
+                </LinearLayout>
+
+                <!--Remarks-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Remarks"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etRemarks"
+                        style="@style/TextViewStyleRegular"
+                        android:background="@drawable/aaa"
+                        android:minLines="3"
+                        android:gravity="top"
+                        android:inputType="textCapCharacters|textMultiLine"/>
+                </LinearLayout>
+
+                <!--BookBy-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Book By"
+                        android:textColor="@color/gray8"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                    <EditText
+                        android:id="@+id/etBookBy"
+                        style="@style/TextViewStyleRegular"
+                        android:hint=""
+                        android:editable="false"
+                        android:enabled="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/aaa"
+                        android:drawableRight="@drawable/ic_arrow_drop_down"
+                        android:drawableTint="@color/gray8" />
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/LLcardButtonNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            style="@style/buttonText"
+                            android:text="Save &amp; Next" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
