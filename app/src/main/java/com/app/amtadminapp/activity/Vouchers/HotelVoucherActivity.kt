@@ -295,12 +295,6 @@ class HotelVoucherActivity : BaseActivity(), RecyclerClickListener {
         when (view.id) {
             R.id.cardEdit -> {
 
-                val intent = Intent(this, AddHotelVoucherActivity::class.java)
-                intent.putExtra("state","edit")
-                intent.putExtra("TourBookingNos",arrHotelVoucherList[position].TourBookingNo)
-                intent.putExtra("HotelVoucherIDs",arrHotelVoucherList[position].ID)
-                startActivity(intent)
-
                 val intent = Intent(this, EditHotelsVouchersActivity::class.java)
                 intent.putExtra("state","edit")
                 intent.putExtra("TourBookingNos",arrHotelVoucherList[position].TourBookingNo)

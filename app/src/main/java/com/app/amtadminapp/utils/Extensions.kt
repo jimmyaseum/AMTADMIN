@@ -84,11 +84,7 @@ fun ImageView.loadDrawableRounded(resourceID: Int, placeholder: Int) {
 
 fun ImageView.loadURI(uri: Uri, placeholder: Int) {
     Glide.with(context).load(uri)
-
         .apply(RequestOptions().transform(CenterCrop()).placeholder(placeholder)).into(this)
-
-        .apply(RequestOptions().transform(FitCenter()).placeholder(placeholder)).into(this)
-
 }
 
 fun ImageView.loadUrlRoundedCorner(url: String? = "", placeholder: Int, radius: Int) {
@@ -108,10 +104,6 @@ fun ImageView.loadUrlRoundedCorner2(url: String? = "", placeholder: Int, radius:
 
 
     val requestOptions = RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL).override(250,150).transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)
-
-    val requestOptions = RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL).override(250,150).transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)
-
-
     Glide.with(context).load(url)
         .thumbnail(Glide.with(getContext()).load(placeholder))
         .apply(requestOptions)
@@ -121,10 +113,7 @@ fun ImageView.loadUrlRoundedCorner2(url: String? = "", placeholder: Int, radius:
 
 fun ImageView.loadDrawableRoundedCorner(placeholder: Int, radius: Int) {
     Glide.with(context).load(placeholder)
-
         .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
-
-        .apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
 
 }
 
@@ -137,12 +126,6 @@ fun ImageView.loadDrawableRoundedCorner(resourceID: Int, placeholder: Int, radiu
 fun ImageView.loadURIRoundedCorner(uri: Uri, placeholder: Int, radius: Int) {
     Glide.with(context).load(uri)
         .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
-
-        .apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
-}
-
-fun ImageView.loadURIRoundedCorner(uri: Uri, placeholder: Int, radius: Int) {
-    Glide.with(context).load(uri).apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
 
 }
 

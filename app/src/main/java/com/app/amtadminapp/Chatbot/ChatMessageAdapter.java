@@ -87,9 +87,6 @@ public class ChatMessageAdapter extends RecyclerView.Adapter<ChatMessageAdapter.
 
     public void onBindViewHolder(@NonNull MessageViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-    public void onBindViewHolder(@NonNull final MessageViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-
-
         String messageSenderId = mAuth.getCurrentUser().getUid();
         Messages messages = userMessagesList.get(position);
 

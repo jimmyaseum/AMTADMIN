@@ -37,9 +37,6 @@ data class PaymentListModel (
     @SerializedName("BookBy")
     val BookBy: String? = null,
     @SerializedName("Branch")
-
-    val Branch: String? = null
-
     val Branch: String? = null,
     @SerializedName("Amount")
     val Amount: String?,

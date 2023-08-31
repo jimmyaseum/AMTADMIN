@@ -60,40 +60,42 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
             recyclerItemClickListener: RecyclerClickListener
         ) {
 
-            var colors = arrayOf(R.drawable.bg_shadow_blue,
-                R.drawable.bg_shadow_orange, R.drawable.bg_shadow_purple)
+            var colors = arrayOf(
+                R.drawable.bg_shadow_blue,
+                R.drawable.bg_shadow_orange, R.drawable.bg_shadow_purple
+            )
 
-            if(model.HotelVoucher != null) {
+            if (model.HotelVoucher != null) {
                 itemView.txtHotelBookingNo.text = model.HotelVoucher
                 itemView.txtHotelBookingNo.setPaintFlags(itemView.txtHotelBookingNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
             }
 
-            if(model.Name != null) {
+            if (model.Name != null) {
                 itemView.txtName.text = model.Name
             }
-            if(model.TourName != null) {
+            if (model.TourName != null) {
                 itemView.txtPackageName.text = model.TourName
             }
-            if(model.TourDateCode != null) {
+            if (model.TourDateCode != null) {
                 itemView.txtTourDateCode.text = model.TourDateCode
             }
-            if(model.NoOfNights != null) {
+            if (model.NoOfNights != null) {
                 itemView.txtNoOfNights.text = model.NoOfNights.toString()
             }
 
-            if(model.TourDate != null) {
+            if (model.TourDate != null) {
                 itemView.txtTourDate.text = model.TourDate
             }
-            if(model.CompanyName != null) {
+            if (model.CompanyName != null) {
                 itemView.txtCompanyName.text = model.CompanyName
             }
-            if(model.VehicleSharingPax != null) {
+            if (model.VehicleSharingPax != null) {
                 itemView.txtVehicleSharing.text = model.VehicleSharingPax
             }
-            if(model.BookByName != null) {
+            if (model.BookByName != null) {
                 itemView.txtBookBy.text = model.BookByName
             }
-            if(model.Branch != null) {
+            if (model.Branch != null) {
                 itemView.txtBranch.text = model.Branch
             }
 
@@ -106,7 +108,7 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
                 arrBookingList.add(splitList2[j])
             }
 
-            if(model.TourBookingNo!!.contains(",")) {
+            if (model.TourBookingNo!!.contains(",")) {
                 val splitList2 = model.TourBookingNo.split(",")
                 for (j in splitList2.indices) {
                     arrBookingList.add(splitList2[j])
@@ -116,11 +118,11 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
             }
 
 
-            if(arrBookingList.size > 0) {
+            if (arrBookingList.size > 0) {
                 var adapter = BookingNoAdapter(mContext, arrBookingList)
                 itemView.rvbookingNo.adapter = adapter
                 adapter.setRecyclerRowClick(object : RecyclerClickListener {
-                    override fun onItemClickEvent(v:View, pos: Int, flag: Int) {
+                    override fun onItemClickEvent(v: View, pos: Int, flag: Int) {
                         val fullpath = model.TourbookingLink + arrBookingList[pos]
                         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullpath))
                         mContext.startActivity(browserIntent)
@@ -129,14 +131,14 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
             }
 
             itemView.txtHotelBookingNo.setOnClickListener {
-                val fullpath =  model.HotelVoucherLink + model.HotelVoucher
+                val fullpath = model.HotelVoucherLink + model.HotelVoucher
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullpath))
                 mContext.startActivity(browserIntent)
             }
 
             itemView.txtReadMore.setOnClickListener {
-                    itemView.LL_More.visible()
-                    itemView.txtReadMore.gone()
+                itemView.LL_More.visible()
+                itemView.txtReadMore.gone()
             }
 
             itemView.txtReadLess.setOnClickListener {
@@ -145,24 +147,31 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
             }
 
             val reminder = position % 3
-            itemView.card.setBackgroundDrawable(ContextCompat.getDrawable(mContext, colors[reminder]))
+            itemView.card.setBackgroundDrawable(
+                ContextCompat.getDrawable(
+                    mContext,
+                    colors[reminder]
+                )
+            )
 
 
             itemView.cardEdit.setOnClickListener {
                 recyclerItemClickListener.onItemClickEvent(it, adapterPosition, 1)
 
-            if(model.IsCreatedFromApp!!) {
+                if (model.IsCreatedFromApp!!) {
 
-                itemView.cardEdit.visible()
-                itemView.cardEdit.setOnClickListener {
-                    recyclerItemClickListener.onItemClickEvent(it, adapterPosition, 1)
+                    itemView.cardEdit.visible()
+                    itemView.cardEdit.setOnClickListener {
+                        recyclerItemClickListener.onItemClickEvent(it, adapterPosition, 1)
+                    }
+                } else {
+                    itemView.cardEdit.gone()
+
                 }
-            } else {
-                itemView.cardEdit.gone()
-
             }
         }
     }
+
     override fun getItemViewType(position: Int): Int {
         return position
     }
