@@ -47,7 +47,11 @@ public class GroupMessageAdapter extends RecyclerView.Adapter<GroupMessageAdapte
         public LinearLayout LLReceiver , LLSender , receiver_pdf , sender_pdf;
         public TextView date;
 
+
         public MessageViewHolder(@NotNull View itemView) {
+
+        public MessageViewHolder(View itemView) {
+
             super(itemView);
 
             date = itemView.findViewById(R.id.date);
@@ -82,7 +86,11 @@ public class GroupMessageAdapter extends RecyclerView.Adapter<GroupMessageAdapte
     }
 
     @Override
+
     public void onBindViewHolder(@NonNull MessageViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+
+    public void onBindViewHolder(@NonNull final MessageViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+
 
         String messageSenderId = mAuth.getCurrentUser().getUid();
         GroupMessages messages = userMessagesList.get(position);

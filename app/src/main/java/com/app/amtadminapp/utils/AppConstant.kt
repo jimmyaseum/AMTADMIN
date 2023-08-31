@@ -7,6 +7,9 @@ object AppConstant {
     val BASE_URL_APP = "http://38.17.55.183/amtapp2022/api/" //  AI005 app development purpose Test
     val BASE_URL_WEB = "http://38.17.55.183/amtapi2022/api/" //  AI005 web development purpose Test
 
+
+
+
 //
 //    val BASE_URL_APP = "http://amtapp.ajaymoditravels.com/api/" //  AI005 development purpose
 //    val BASE_URL_WEB = "https://amtcrm.ajaymoditravels.com/api/" //  AI005 development purpose

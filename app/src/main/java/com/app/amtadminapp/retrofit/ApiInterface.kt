@@ -3,6 +3,10 @@ package com.app.amtadminapp.retrofit
 import com.app.amtadminapp.Chatbot.Nofification.PushGroupNotification
 import com.app.amtadminapp.Chatbot.Nofification.PushNotification
 import com.app.amtadminapp.model.AdminAppVersion
+
+
+import com.app.amtadminapp.model.TourBookingDetailsResponse
+
 import com.app.amtadminapp.model.TourBookingPaxResponse
 import com.app.amtadminapp.model.response.*
 import com.app.amtadminapp.model.response.booking.*
@@ -43,8 +47,11 @@ interface ApiInterface {
     @GET("tour/tourlist")
     fun getAllTour(): Call<TourPackageListResponse>
 
+
     @GET("hotels/findall")
     fun getAllHotel(): Call<HotelListResponse>
+
+
 
     @GET("mealtypes/findallactive")
     fun getAllMeal(): Call<MealListResponse>
@@ -109,6 +116,10 @@ interface ApiInterface {
     @POST("tourbooking/remarksbybookingid") // step 6
     fun GetRemarkList(@Body body: RequestBody?): Call<RemarksListResponse>
 
+
+
+
+
     @POST("TourBooking/MultiTourBookingView")
     fun GetMultiTourBookingView(@Query("PBNNo") _id: Int): Call<MultiTourBookingViewResponse>
 
@@ -123,6 +134,7 @@ interface ApiInterface {
 
     @GET("HotelBooking/FindByID") // add paging
     fun GetHotelBookingFindBy(@Query("id") _id: Int): Call<HotelBookingViewResponse>
+
 
     @POST("hotelblockroom/hotelblockreport")
     fun getHotelBlockDetails(@Body body: RequestBody?): Call<HotelBlockReportResponse>
@@ -159,6 +171,8 @@ interface ApiInterface {
 
     @POST("TourBooking/SelfPendingPaymentReport")
     fun getSelfPendingPaymentReportDetails(@Body body: RequestBody?): Call<SelfPendingPaymentReportResponse>
+
+
 
 
     // endregion
@@ -259,6 +273,31 @@ interface ApiInterface {
 
     @POST("TourBooking/TourBookingPaxDetails")
     fun getTourBookingPaxDetails(@Body body: RequestBody?): Call<TourBookingPaxResponse>
+
+
+
+
+    @POST("Voucher/HotelVoucherViewbyBookingNo")
+    fun getTourBookingDetails(@Body body: RequestBody?): Call<TourBookingDetailsResponse>
+
+    @Multipart
+    @POST("Voucher/HotelVoucherfromApp") // done
+    fun AddHotelVoucher(@Part("CreatedBy") createdby: RequestBody?,
+                     @Part("TourBookingNo") TourBookingNo : RequestBody?,
+                     @Part("CityIDs") CityIDs : RequestBody?,
+                     @Part attachment: ArrayList<MultipartBody.Part>?
+    ): retrofit2.Call<CommonResponse>
+
+    @POST("Voucher/HotelVoucherFindByID")
+    fun getHotelVoucherFindByID(@Body body: RequestBody?): Call<HotelVoucherFindByIDResponse>
+
+    @Multipart
+    @POST("Voucher/HotelVoucherUpdate") // done
+    fun UpdateHotelVoucher(@Part("UpdatedBy") UpdatedBy: RequestBody?,
+                        @Part("ID") ID : RequestBody?,
+                        @Part("CityID") CityID : RequestBody?,
+                        @Part attachment: ArrayList<MultipartBody.Part>?
+    ): retrofit2.Call<CommonResponse>
 
 
     // endregion

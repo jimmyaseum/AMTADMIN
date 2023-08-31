@@ -84,8 +84,13 @@
                                     android:id="@+id/rvbookingNo"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+
                                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                                     app:spanCount="5"
+
+                                    app:spanCount="3"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+
                                     tools:listitem="@layout/adapter_tourbooking" />
 
                             </RelativeLayout>

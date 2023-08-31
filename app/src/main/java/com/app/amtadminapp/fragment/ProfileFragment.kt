@@ -9,7 +9,10 @@ import android.view.ViewGroup
 import com.app.amtadminapp.Chatbot.ChatBoatActivity
 import com.app.amtadminapp.R
 import com.app.amtadminapp.activity.*
+
 import com.app.amtadminapp.activity.Reports.ReportsActivity
+
+
 import com.app.amtadminapp.activity.Vouchers.VoucherActivity
 import com.app.amtadminapp.model.response.CommonResponse
 import com.app.amtadminapp.model.response.RegistrationResponse
@@ -59,7 +62,10 @@ class ProfileFragment : BaseFragment(), View.OnClickListener {
 
         views!!.LLEditProfile.setOnClickListener(this)
         views!!.LL_Logout.setOnClickListener(this)
+
         views!!.LL_Reports.setOnClickListener(this)
+
+
         views!!.LL_General_Info.setOnClickListener(this)
         views!!.LL_My_Voucher.setOnClickListener(this)
         views!!.LL_Notification.setOnClickListener(this)
@@ -90,10 +96,13 @@ class ProfileFragment : BaseFragment(), View.OnClickListener {
                 val intent = Intent(activity!!, GeneralInformationActivity::class.java)
                 startActivity(intent)
             }
+
             R.id.LL_Reports -> {
                 val intent = Intent(activity!!, ReportsActivity::class.java)
                 startActivity(intent)
             }
+
+
             R.id.LL_Notification -> {
                 val intent = Intent(activity!!, NotificationListActivity::class.java)
                 startActivity(intent)

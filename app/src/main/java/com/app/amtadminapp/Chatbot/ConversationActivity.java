@@ -7,6 +7,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -16,6 +17,12 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.TextUtils;
+
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -28,9 +35,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -58,9 +69,13 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
+
+import java.io.File;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -75,7 +90,10 @@ import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 import droidninja.filepicker.FilePickerBuilder;
 import droidninja.filepicker.FilePickerConst;
+
 import kotlin.jvm.Throws;
+
+
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 import retrofit2.Call;
@@ -257,7 +275,11 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
     }
 
     private void SendMessage() {
+
         String messageText = userMessageInput.getText().toString();
+
+        final String messageText = userMessageInput.getText().toString();
+
 
         if (TextUtils.isEmpty(messageText)) {
             Toast.makeText(this, "Please write message first...", Toast.LENGTH_SHORT).show();
@@ -369,7 +391,11 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
     }
 
     private void showBottomSheetDialogGST() {
+
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this,R.style.SheetDialog);
+
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this,R.style.SheetDialog);
+
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_dialog);
 
         LinearLayout Select_Image = bottomSheetDialog.findViewById(R.id.Select_Image);
@@ -423,10 +449,18 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
         /*if (requestCode == 438 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             UploadImage(data);
         } else */
+
         if(requestCode == 111) {
             if (resultCode == RESULT_OK && data != null) {
                 ImagePaths = new ArrayList();
                 ImagePaths.addAll(data.getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
+
+         if(requestCode == 111) {
+            if (resultCode == RESULT_OK && data != null) {
+                ImagePaths = new ArrayList();
+//                ImagePaths.addAll(data.getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
+                ImagePaths.addAll(data.<Uri>getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
+
                 Uri PassportPath = ImagePaths.get(0);
                 CropImage.activity(PassportPath)
                         .setGuidelines(CropImageView.Guidelines.ON)
@@ -528,15 +562,26 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Documents Files");
 
+
         String messageSenderRef = "Messages/" + currentUsetID + "/" + messageReceiverID;
         String messageReceiverRef = "Messages/" + messageReceiverID + "/" + currentUsetID;
+
+        final String messageSenderRef = "Messages/" + currentUsetID + "/" + messageReceiverID;
+        final String messageReceiverRef = "Messages/" + messageReceiverID + "/" + currentUsetID;
+
 
         DatabaseReference userMessageKeyRef = RootRef.child("Messages")
                 .child(currentUsetID).child(messageReceiverID).push();
 
+
         String messagePushID = userMessageKeyRef.getKey();
 
         StorageReference filePath = storageReference.child(messagePushID + "." + "jpg");
+
+        final String messagePushID = userMessageKeyRef.getKey();
+
+        final StorageReference filePath = storageReference.child(messagePushID + "." + "jpg");
+
 
         uploadTask = filePath.putFile(fileUri);
         uploadTask.continueWithTask(new Continuation() {
@@ -584,7 +629,11 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
         });
     }
 
+
     private void GetUsetInfo(String msg) {
+
+    private void GetUsetInfo(final String msg) {
+
         RootRef.child(ChatConstant.F_CUSTOMER).child(messageReceiverID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

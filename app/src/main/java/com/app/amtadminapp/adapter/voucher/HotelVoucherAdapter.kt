@@ -100,10 +100,22 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
 
             var arrBookingList: ArrayList<String> = ArrayList()
 
+
             val splitList2 = model.TourBookingNo!!.split(",")
             for (j in splitList2.indices) {
                 arrBookingList.add(splitList2[j])
             }
+
+            if(model.TourBookingNo!!.contains(",")) {
+                val splitList2 = model.TourBookingNo.split(",")
+                for (j in splitList2.indices) {
+                    arrBookingList.add(splitList2[j])
+                }
+            } else {
+                arrBookingList.add(model.TourBookingNo)
+            }
+
+
             if(arrBookingList.size > 0) {
                 var adapter = BookingNoAdapter(mContext, arrBookingList)
                 itemView.rvbookingNo.adapter = adapter
@@ -135,8 +147,19 @@ class HotelVoucherAdapter(private val mContext: Context, private val arrData: Ar
             val reminder = position % 3
             itemView.card.setBackgroundDrawable(ContextCompat.getDrawable(mContext, colors[reminder]))
 
+
             itemView.cardEdit.setOnClickListener {
                 recyclerItemClickListener.onItemClickEvent(it, adapterPosition, 1)
+
+            if(model.IsCreatedFromApp!!) {
+
+                itemView.cardEdit.visible()
+                itemView.cardEdit.setOnClickListener {
+                    recyclerItemClickListener.onItemClickEvent(it, adapterPosition, 1)
+                }
+            } else {
+                itemView.cardEdit.gone()
+
             }
         }
     }

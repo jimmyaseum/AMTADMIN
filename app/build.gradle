@@ -12,8 +12,13 @@ android {
         applicationId "com.app.amtadminapp"
         minSdkVersion 21
         targetSdkVersion 31
+
         versionCode 8
         versionName "1.8"
+
+        versionCode 9
+        versionName "1.9"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -45,16 +50,32 @@ android {
     dataBinding {
         enabled = true
     }
+
+
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 //    kapt {
 //        generateStubs = true
 //    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    
+//    kapt {
+//        generateStubs = true
+//    }
+
+
 //    buildFeatures {
 //        viewBinding true
 //    }
@@ -70,6 +91,12 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINT_LAYOUT_VERSION"
     implementation "androidx.legacy:legacy-support-v4:$LEGACY_SUPPORT_VERSION"
     implementation "com.google.android.material:material:$MATERIAL_VERSION"
+
+
+
+
+    implementation 'androidx.annotation:annotation:1.0.2'
+
 
     // dependencies for local unit tests
     implementation 'androidx.appcompat:appcompat:1.0.2'

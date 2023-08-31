@@ -26,6 +26,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
+
+
+
 class SplashActivity : AppCompatActivity() {
 
     var sharedPreference: SharedPreference? = null
@@ -40,6 +43,10 @@ class SplashActivity : AppCompatActivity() {
     var LatestVersion = ""
     var dialog: Dialog? = null
     private var mAuth: FirebaseAuth? = null
+
+
+
+    // Jimmy Latest Commited by 02/08/2023 on 3: 20
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

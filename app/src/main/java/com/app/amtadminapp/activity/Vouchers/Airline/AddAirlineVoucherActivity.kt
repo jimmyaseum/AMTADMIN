@@ -431,12 +431,20 @@ class AddAirlineVoucherActivity : BaseActivity(),  View.OnClickListener, EasyPer
 
                     } else {
                         hideProgress()
+
+
+                        llTBNOInfo.gone()
+
                         toast(response.body()?.Details.toString(), AppConstant.TOAST_SHORT)
                     }
                 }
             }
             override fun onFailure(call: Call<TourBookingPaxResponse>, t: Throwable) {
                 hideProgress()
+
+
+                llTBNOInfo.gone()
+
                 toast(getString(R.string.error_failed_to_connect), AppConstant.TOAST_SHORT)
             }
         })
@@ -474,6 +482,9 @@ class AddAirlineVoucherActivity : BaseActivity(),  View.OnClickListener, EasyPer
             .setActivityTheme(R.style.LibAppTheme) //optional
             .pickPhoto(this, 111);
     }
+
+
+
 
 
     /** AI005

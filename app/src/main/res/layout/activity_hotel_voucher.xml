@@ -90,6 +90,28 @@
             android:tint="@color/colorWhite"
             app:backgroundTint="@color/colorAccent"
             android:visibility="gone"/>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddHotelVoucher1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:rotation="45"
+            android:src="@drawable/ic_close"
+            android:tint="@color/colorWhite"
+            app:backgroundTint="@color/colorAccent"
+            android:visibility="visible"/>
+
+
+
     </RelativeLayout>
 
 </LinearLayout>

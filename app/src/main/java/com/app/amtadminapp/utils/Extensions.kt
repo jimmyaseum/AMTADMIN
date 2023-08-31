@@ -28,6 +28,10 @@ import com.app.amtadminapp.utils.AppConstant.BLUR_RADIUS
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
+
+
+import com.bumptech.glide.load.resource.bitmap.FitCenter
+
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.google.gson.reflect.TypeToken
@@ -62,7 +66,7 @@ fun getRequestJSONBody(value: String): RequestBody =
     RequestBody.create(MediaType.parse("application/json"), value)
 
 fun ImageView.loadUrl(url: String? = "", placeholder: Int) {
-//    println("=======url======="+url)
+//    println("url"+url)
     Glide.with(context).load(url).apply(RequestOptions().placeholder(placeholder)).into(this)
 }
 
@@ -80,20 +84,33 @@ fun ImageView.loadDrawableRounded(resourceID: Int, placeholder: Int) {
 
 fun ImageView.loadURI(uri: Uri, placeholder: Int) {
     Glide.with(context).load(uri)
+
         .apply(RequestOptions().transform(CenterCrop()).placeholder(placeholder)).into(this)
+
+        .apply(RequestOptions().transform(FitCenter()).placeholder(placeholder)).into(this)
+
 }
 
 fun ImageView.loadUrlRoundedCorner(url: String? = "", placeholder: Int, radius: Int) {
 
     Glide.with(context).load(url)
+
         .centerCrop()
         .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder))
+
+        .fitCenter()
+        .apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder))
+
         .into(this)
 }
 
 fun ImageView.loadUrlRoundedCorner2(url: String? = "", placeholder: Int, radius: Int) {
 
+
     val requestOptions = RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL).override(250,150).transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)
+
+    val requestOptions = RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL).override(250,150).transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)
+
 
     Glide.with(context).load(url)
         .thumbnail(Glide.with(getContext()).load(placeholder))
@@ -104,22 +121,38 @@ fun ImageView.loadUrlRoundedCorner2(url: String? = "", placeholder: Int, radius:
 
 fun ImageView.loadDrawableRoundedCorner(placeholder: Int, radius: Int) {
     Glide.with(context).load(placeholder)
+
         .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
+
+        .apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
+
 }
 
 fun ImageView.loadDrawableRoundedCorner(resourceID: Int, placeholder: Int, radius: Int) {
     Glide.with(context).load(resourceID)
+
         .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
 }
 
 fun ImageView.loadURIRoundedCorner(uri: Uri, placeholder: Int, radius: Int) {
     Glide.with(context).load(uri)
         .apply(RequestOptions().transform(CenterCrop(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
+
+        .apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
+}
+
+fun ImageView.loadURIRoundedCorner(uri: Uri, placeholder: Int, radius: Int) {
+    Glide.with(context).load(uri).apply(RequestOptions().transform(FitCenter(), RoundedCorners(radius)).placeholder(placeholder)).into(this)
+
 }
 
 fun ImageView.loadUrlBlurred(url: String? = "", placeholder: Int) {
     Glide.with(context).load(url)
+
         .centerCrop()
+
+        .fitCenter()
+
         .apply(RequestOptions().transform(BlurTransformation(BLUR_RADIUS)))
         .into(this)
 }
@@ -128,7 +161,11 @@ fun ImageView.loadUrlBlurred(url: String? = "", placeholder: Int) {
 * 1st Paramter - placeholder*/
 fun ImageView.loadDrawableBlurred(placeholder: Int) {
     Glide.with(context).load(placeholder)
+
         .centerCrop()
+
+        .fitCenter()
+
         .apply(RequestOptions().transform(BlurTransformation(BLUR_RADIUS)))
         .into(this)
 }
@@ -138,7 +175,11 @@ fun ImageView.loadDrawableBlurred(placeholder: Int) {
 * 2nd Paramter - placeholder*/
 fun ImageView.loadDrawableBlurred(resourceID: Int, placeholder: Int) {
     Glide.with(context).load(resourceID)
+
         .centerCrop()
+
+        .fitCenter()
+
         .placeholder(placeholder)
         .apply(RequestOptions().transform(BlurTransformation(BLUR_RADIUS)))
         .into(this)
@@ -224,7 +265,7 @@ fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(t
 inline fun <T> justTry(block: () -> T) = try {
     block()
 } catch (e: Throwable) {
-    LogUtil.e("EXte", "=============${e.localizedMessage}")
+    LogUtil.e("EXte", "======${e.localizedMessage}")
     e.localizedMessage
 }
 

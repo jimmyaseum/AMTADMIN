@@ -83,7 +83,7 @@ abstract class BaseFragment : Fragment() {
         flagTemp = isTemp
 
         for (i in 0 until v.childCount) {
-//            LogUtil.e(TAG, "===========childCount====$i=====$flagTemp")
+//            LogUtil.e(TAG, "====childCount====$i=====$flagTemp")
             if (v.getChildAt(i) is EditText) {
 
 
@@ -91,14 +91,14 @@ abstract class BaseFragment : Fragment() {
                 if ((v.getChildAt(i) as? EditText)?.text.toString().isEmpty()) {
                     flagTemp = false
                     /*edit text is empty*/
-//                    LogUtil.e(TAG, "===========is Empty====" + (v.getChildAt(i) as? EditText))
+//                    LogUtil.e(TAG, "====is Empty====" + (v.getChildAt(i) as? EditText))
                 }
 //                LogUtil.e(TAG, "Parent is Layout " + ((v.getChildAt(i) as? EditText)?.parent is TextInputLayout))
             } else if (v.getChildAt(i) is ViewGroup) {
                 checkIfFieldLeftBlank((v.getChildAt(i) as? ViewGroup)!!, flagTemp)
             }
         }
-//        LogUtil.e(TAG, "===========flag====$flag=========$flagTemp")
+//        LogUtil.e(TAG, "====flag====$flag==$flagTemp")
 
         return flagTemp
     }

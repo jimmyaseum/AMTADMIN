@@ -192,8 +192,13 @@
                     android:layout_marginBottom="@dimen/_5sdp">
 
                     <ImageView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+
                         android:src="@drawable/ic_rate_review"
                         android:tint="@color/colorAccent"
                         android:background="@drawable/bg_icon_button"/>
@@ -213,6 +218,7 @@
                         android:tint="@color/colorBlack"
                         android:background="@drawable/bg_back_button"/>
                 </LinearLayout>
+
 
                 <!--Reports-->
                 <LinearLayout
@@ -246,6 +252,8 @@
                         android:tint="@color/colorBlack"
                         android:background="@drawable/bg_back_button"/>
                 </LinearLayout>
+
+
 
                 <!--Logout-->
                 <LinearLayout

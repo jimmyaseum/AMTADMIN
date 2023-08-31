@@ -63,7 +63,7 @@ abstract class BaseActivity : AppCompatActivity() {
         flagTemp = isTemp
 
         for (i in 0 until v.childCount) {
-//            LogUtil.e(TAG, "===========childCount====$i=====$flagTemp")
+//            LogUtil.e(TAG, "====childCount====$i=====$flagTemp")
             if (v.getChildAt(i) is EditText) {
 
 //                if ((v.getChildAt(i) as? EditText)?.text.toString().isEmpty() && !(optionalParams.contains(v.getChildAt(i).id))) {

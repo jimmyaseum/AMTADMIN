@@ -29,6 +29,10 @@
             android:gravity="center"
             android:text="Tour Booking" />
     </RelativeLayout>
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,15 +42,28 @@
             android:id="@+id/llInquirySteps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+
+
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvOrderSteps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:orientation="horizontal"
                 tools:itemCount="4"
                 android:scrollbars="none" />
         </LinearLayout>
+
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4" />
+        </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -9,6 +9,12 @@ import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.amtadminapp.R
 import com.app.amtadminapp.activity.BaseActivity
+
+
+import com.app.amtadminapp.activity.Vouchers.Airline.AddAirlineVoucherActivity
+import com.app.amtadminapp.activity.Vouchers.Hotels.AddHotelsVouchersActivity
+import com.app.amtadminapp.activity.Vouchers.Hotels.EditHotelsVouchersActivity
+
 import com.app.amtadminapp.activity.Vouchers.hotel.AddHotelVoucherActivity
 import com.app.amtadminapp.adapter.voucher.HotelVoucherAdapter
 import com.app.amtadminapp.interFase.RecyclerClickListener
@@ -16,6 +22,10 @@ import com.app.amtadminapp.model.response.HotelVoucherModel
 import com.app.amtadminapp.model.response.HotelVoucherResponse
 import com.app.amtadminapp.retrofit.ApiUtils
 import com.app.amtadminapp.utils.*
+
+
+import kotlinx.android.synthetic.main.activity_dashboard_hotel_voucher_filter.*
+
 import kotlinx.android.synthetic.main.activity_hotel_voucher.*
 import kotlinx.android.synthetic.main.activity_hotel_voucher_list.idNestedSV
 import kotlinx.android.synthetic.main.activity_hotel_voucher_list.idPBLoading
@@ -64,11 +74,24 @@ class HotelVoucherActivity : BaseActivity(), RecyclerClickListener {
             finish()
         }
 
+
+
+        // visible gone not used
+
         fabAddHotelVoucher.setOnClickListener {
             val intent = Intent(this, AddHotelVoucherActivity::class.java)
             intent.putExtra("state","add")
             startActivity(intent)
         }
+
+
+
+        fabAddHotelVoucher1.setOnClickListener {
+            val intent = Intent(this, AddHotelsVouchersActivity::class.java)
+            intent.putExtra("state","add")
+            startActivityForResult(intent, 1002)
+        }
+
 
         imgFilter.setOnClickListener {
             val intent = Intent(this, HotelVoucherListFilterActivity::class.java)
@@ -256,6 +279,12 @@ class HotelVoucherActivity : BaseActivity(), RecyclerClickListener {
                     CallAPI()
 
                 }
+
+
+                1002 -> {
+                    CallAPI()
+                }
+
             }
         }
     }
@@ -265,11 +294,19 @@ class HotelVoucherActivity : BaseActivity(), RecyclerClickListener {
 
         when (view.id) {
             R.id.cardEdit -> {
+
                 val intent = Intent(this, AddHotelVoucherActivity::class.java)
                 intent.putExtra("state","edit")
                 intent.putExtra("TourBookingNos",arrHotelVoucherList[position].TourBookingNo)
                 intent.putExtra("HotelVoucherIDs",arrHotelVoucherList[position].ID)
                 startActivity(intent)
+
+                val intent = Intent(this, EditHotelsVouchersActivity::class.java)
+                intent.putExtra("state","edit")
+                intent.putExtra("TourBookingNos",arrHotelVoucherList[position].TourBookingNo)
+                intent.putExtra("ID",arrHotelVoucherList[position].ID)
+                startActivityForResult(intent, 1002)
+
             }
         }
     }

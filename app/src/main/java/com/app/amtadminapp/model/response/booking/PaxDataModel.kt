@@ -21,4 +21,8 @@ data class PaxDataModel (
     @SerializedName("tilNoofRooms")
     var tilNoofRooms: TextInputLayout? = null
 
+
     )
+
+)
+

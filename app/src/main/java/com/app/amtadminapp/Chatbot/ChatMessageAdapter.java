@@ -1,5 +1,9 @@
 package com.app.amtadminapp.Chatbot;
 
+
+
+
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
@@ -80,7 +84,11 @@ public class ChatMessageAdapter extends RecyclerView.Adapter<ChatMessageAdapter.
     }
 
     @Override
+
     public void onBindViewHolder(@NonNull MessageViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+
+    public void onBindViewHolder(@NonNull final MessageViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+
 
         String messageSenderId = mAuth.getCurrentUser().getUid();
         Messages messages = userMessagesList.get(position);

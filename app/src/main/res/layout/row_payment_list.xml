@@ -33,6 +33,10 @@
                         android:padding="@dimen/_5sdp">
 
                         <LinearLayout
+
+
+                            android:id="@+id/LLReceiptNo"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -60,6 +64,10 @@
                                 android:textSize="@dimen/_12sdp" />
                         </LinearLayout>
                         <LinearLayout
+
+
+                            android:id="@+id/LLTBN"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -87,6 +95,10 @@
                                 android:textSize="@dimen/_12sdp" />
                         </LinearLayout>
                         <LinearLayout
+
+
+                            android:id="@+id/LLPaymentDate"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -116,6 +128,10 @@
 
                         </LinearLayout>
                         <LinearLayout
+
+
+                            android:id="@+id/LLPaymentFor"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -146,6 +162,10 @@
 
                         </LinearLayout>
                         <LinearLayout
+
+
+                            android:id="@+id/LLName"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -194,6 +214,10 @@
                             android:orientation="vertical"
                             android:visibility="gone">
                             <LinearLayout
+
+
+                                android:id="@+id/LLCompany"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -223,6 +247,10 @@
 
                             </LinearLayout>
                             <LinearLayout
+
+
+                                android:id="@+id/LLPaymentType"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -248,6 +276,10 @@
                                     android:textSize="@dimen/_10sdp" />
                             </LinearLayout>
                             <LinearLayout
+
+
+                                android:id="@+id/LLReceivedBy"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -273,6 +305,10 @@
                                     android:textSize="@dimen/_10sdp" />
                             </LinearLayout>
                             <LinearLayout
+
+
+                                android:id="@+id/LLBranch"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -298,6 +334,56 @@
                                     android:textColor="@color/colorBlack"
                                     android:textSize="@dimen/_10sdp"/>
                             </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/LLAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.3"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="Amount : "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_10sdp"/>
+                                <TextView
+                                    android:id="@+id/txtAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="2"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text=""
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_10sdp"/>
+                            </LinearLayout>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardAttachment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/_3sdp"
+                                android:elevation="@dimen/_3sdp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/_5sdp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Open Attachment >>"
+                                    android:paddingTop="@dimen/_2sdp"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_medium"/>
+                            </androidx.cardview.widget.CardView>
+
                             <TextView
                                 android:id="@+id/txtReadLess"
                                 android:layout_width="wrap_content"
