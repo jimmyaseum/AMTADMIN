@@ -68,9 +68,6 @@ data class HotelVoucherModel (
     @SerializedName("Remarks")
     val Remarks: String? = null,
     @SerializedName("OldHotelVoucherNo")
-
-    val OldHotelVoucherNo: String? = null
-
     val OldHotelVoucherNo: String? = null,
     @SerializedName("IsCreatedFromApp")
     val IsCreatedFromApp: Boolean? = false

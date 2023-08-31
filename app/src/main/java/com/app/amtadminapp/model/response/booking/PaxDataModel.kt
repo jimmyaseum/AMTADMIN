@@ -22,7 +22,5 @@ data class PaxDataModel (
     var tilNoofRooms: TextInputLayout? = null
 
 
-    )
-
 )
 

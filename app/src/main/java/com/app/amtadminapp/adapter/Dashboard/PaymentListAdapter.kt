@@ -48,147 +48,163 @@ class PaymentListAdapter(private val mContext: Context, private val arrData: Arr
             model: PaymentListModel,
             mContext: Context
         ) {
-            var colors = arrayOf(R.drawable.bg_shadow_blue,
-                R.drawable.bg_shadow_orange, R.drawable.bg_shadow_purple)
+            var colors = arrayOf(
+                R.drawable.bg_shadow_blue,
+                R.drawable.bg_shadow_orange, R.drawable.bg_shadow_purple
+            )
 
 
-            if(model.PaymentDate != null) {
+            if (model.PaymentDate != null) {
                 itemView.txtPaymentDate.text = model.PaymentDate
             }
-            if(model.ReceiptNo != null) {
+            if (model.ReceiptNo != null) {
                 itemView.txtReceiptNo.text = model.ReceiptNo
                 itemView.txtReceiptNo.setPaintFlags(itemView.txtReceiptNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
             }
-            if(model.TourBookingNo != null) {
+            if (model.TourBookingNo != null) {
                 itemView.txtTourBokingNo.text = model.TourBookingNo
                 itemView.txtTourBokingNo.setPaintFlags(itemView.txtTourBokingNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
             }
-            if(model.Name != null) {
+            if (model.Name != null) {
                 itemView.txtName.text = model.Name
             }
-            if(model.PaymentFor != null) {
+            if (model.PaymentFor != null) {
                 itemView.txtPaymentFor.text = model.PaymentFor
             }
-            if(model.CompanyName != null) {
+            if (model.CompanyName != null) {
                 itemView.txtCompanyName.text = model.CompanyName
             }
-            if(model.PaymentType != null) {
+            if (model.PaymentType != null) {
                 itemView.txtPaymentType.text = model.PaymentType
             }
-            if(model.BookBy != null) {
+            if (model.BookBy != null) {
                 itemView.txtReceivedBy.text = model.BookBy
             }
-            if(model.Branch != null) {
+            if (model.Branch != null) {
                 itemView.txtBranch.text = model.Branch
 
-            if(model.PaymentDate != null && model.PaymentDate != "") {
-                itemView.txtPaymentDate.text = model.PaymentDate
-            } else {
-                itemView.LLPaymentDate.gone()
-            }
-
-            if(model.ReceiptNo != null  && model.ReceiptNo != "") {
-                itemView.txtReceiptNo.text = model.ReceiptNo
-                itemView.txtReceiptNo.setPaintFlags(itemView.txtReceiptNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
-            } else {
-                itemView.LLReceiptNo.gone()
-            }
-
-            if(model.TourBookingNo != null && model.TourBookingNo != "") {
-                itemView.txtTourBokingNo.text = model.TourBookingNo
-                itemView.txtTourBokingNo.setPaintFlags(itemView.txtTourBokingNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
-            } else {
-                itemView.LLTBN.gone()
-            }
-
-            if(model.Name != null && model.Name != "") {
-                itemView.txtName.text = model.Name
-            } else {
-                itemView.LLName.gone()
-            }
-
-            if(model.PaymentFor != null && model.PaymentFor != "") {
-                itemView.txtPaymentFor.text = model.PaymentFor
-            } else {
-                itemView.LLPaymentFor.gone()
-            }
-
-            if(model.CompanyName != null && model.CompanyName != "") {
-                itemView.txtCompanyName.text = model.CompanyName
-            } else {
-                itemView.LLCompany.gone()
-            }
-
-            if(model.PaymentType != null && model.PaymentType != "") {
-                itemView.txtPaymentType.text = model.PaymentType
-            } else {
-                itemView.LLPaymentType.gone()
-            }
-
-            if(model.BookBy != null && model.BookBy != "") {
-                itemView.txtReceivedBy.text = model.BookBy
-            } else {
-                itemView.LLReceivedBy.gone()
-            }
-
-            if(model.Branch != null && model.Branch != "") {
-                itemView.txtBranch.text = model.Branch
-            } else {
-                itemView.LLBranch.gone()
-            }
-
-            if(model.Amount != null && model.Amount != "") {
-                itemView.txtAmount.text = model.Amount
-            } else {
-                itemView.LLAmount.gone()
-            }
-
-            if(model.ReceiptImage != null && model.ReceiptImage != "") {
-                itemView.cardAttachment.visible()
-                itemView.cardAttachment.setOnClickListener {
-                    if(isOnline(mContext)) {
-                        if(model.ReceiptImage!!.contains(".pdf")) {
-                            var format = "https://docs.google.com/gview?embedded=true&url=%s"
-                            val fullPath: String = java.lang.String.format(Locale.ENGLISH, format, model.ReceiptImage)
-                            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullPath))
-                            mContext.startActivity(browserIntent)
-                        } else {
-                            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(model.ReceiptImage))
-                            mContext.startActivity(browserIntent)
-                        }
-                    } else {
-                        mContext.toast(mContext.resources.getString(R.string.msg_no_internet), AppConstant.TOAST_SHORT)
-                    }
+                if (model.PaymentDate != null && model.PaymentDate != "") {
+                    itemView.txtPaymentDate.text = model.PaymentDate
+                } else {
+                    itemView.LLPaymentDate.gone()
                 }
-            } else {
-                itemView.cardAttachment.gone()
 
-            }
+                if (model.ReceiptNo != null && model.ReceiptNo != "") {
+                    itemView.txtReceiptNo.text = model.ReceiptNo
+                    itemView.txtReceiptNo.setPaintFlags(itemView.txtReceiptNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
+                } else {
+                    itemView.LLReceiptNo.gone()
+                }
 
-            itemView.txtReceiptNo.setOnClickListener {
-                val fullpath =  model.PaymentLink + model.ReceiptNo
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullpath))
-                mContext.startActivity(browserIntent)
-            }
+                if (model.TourBookingNo != null && model.TourBookingNo != "") {
+                    itemView.txtTourBokingNo.text = model.TourBookingNo
+                    itemView.txtTourBokingNo.setPaintFlags(itemView.txtTourBokingNo.getPaintFlags() or Paint.UNDERLINE_TEXT_FLAG)
+                } else {
+                    itemView.LLTBN.gone()
+                }
 
-            itemView.txtTourBokingNo.setOnClickListener {
-                val fullpath =  model.TourbookingLink + model.TourBookingNo
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullpath))
-                mContext.startActivity(browserIntent)
-            }
+                if (model.Name != null && model.Name != "") {
+                    itemView.txtName.text = model.Name
+                } else {
+                    itemView.LLName.gone()
+                }
 
-            itemView.txtReadMore.setOnClickListener {
+                if (model.PaymentFor != null && model.PaymentFor != "") {
+                    itemView.txtPaymentFor.text = model.PaymentFor
+                } else {
+                    itemView.LLPaymentFor.gone()
+                }
+
+                if (model.CompanyName != null && model.CompanyName != "") {
+                    itemView.txtCompanyName.text = model.CompanyName
+                } else {
+                    itemView.LLCompany.gone()
+                }
+
+                if (model.PaymentType != null && model.PaymentType != "") {
+                    itemView.txtPaymentType.text = model.PaymentType
+                } else {
+                    itemView.LLPaymentType.gone()
+                }
+
+                if (model.BookBy != null && model.BookBy != "") {
+                    itemView.txtReceivedBy.text = model.BookBy
+                } else {
+                    itemView.LLReceivedBy.gone()
+                }
+
+                if (model.Branch != null && model.Branch != "") {
+                    itemView.txtBranch.text = model.Branch
+                } else {
+                    itemView.LLBranch.gone()
+                }
+
+                if (model.Amount != null && model.Amount != "") {
+                    itemView.txtAmount.text = model.Amount
+                } else {
+                    itemView.LLAmount.gone()
+                }
+
+                if (model.ReceiptImage != null && model.ReceiptImage != "") {
+                    itemView.cardAttachment.visible()
+                    itemView.cardAttachment.setOnClickListener {
+                        if (isOnline(mContext)) {
+                            if (model.ReceiptImage!!.contains(".pdf")) {
+                                var format = "https://docs.google.com/gview?embedded=true&url=%s"
+                                val fullPath: String = java.lang.String.format(
+                                    Locale.ENGLISH,
+                                    format,
+                                    model.ReceiptImage
+                                )
+                                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullPath))
+                                mContext.startActivity(browserIntent)
+                            } else {
+                                val browserIntent =
+                                    Intent(Intent.ACTION_VIEW, Uri.parse(model.ReceiptImage))
+                                mContext.startActivity(browserIntent)
+                            }
+                        } else {
+                            mContext.toast(
+                                mContext.resources.getString(R.string.msg_no_internet),
+                                AppConstant.TOAST_SHORT
+                            )
+                        }
+                    }
+                } else {
+                    itemView.cardAttachment.gone()
+
+                }
+
+                itemView.txtReceiptNo.setOnClickListener {
+                    val fullpath = model.PaymentLink + model.ReceiptNo
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullpath))
+                    mContext.startActivity(browserIntent)
+                }
+
+                itemView.txtTourBokingNo.setOnClickListener {
+                    val fullpath = model.TourbookingLink + model.TourBookingNo
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(fullpath))
+                    mContext.startActivity(browserIntent)
+                }
+
+                itemView.txtReadMore.setOnClickListener {
                     itemView.LL_More.visible()
                     itemView.txtReadMore.gone()
-            }
+                }
 
-            itemView.txtReadLess.setOnClickListener {
-                itemView.LL_More.gone()
-                itemView.txtReadMore.visible()
-            }
+                itemView.txtReadLess.setOnClickListener {
+                    itemView.LL_More.gone()
+                    itemView.txtReadMore.visible()
+                }
 
-            val reminder = position % 3
-            itemView.card.setBackgroundDrawable(ContextCompat.getDrawable(mContext, colors[reminder]))
+                val reminder = position % 3
+                itemView.card.setBackgroundDrawable(
+                    ContextCompat.getDrawable(
+                        mContext,
+                        colors[reminder]
+                    )
+                )
+            }
         }
     }
     override fun getItemViewType(position: Int): Int {

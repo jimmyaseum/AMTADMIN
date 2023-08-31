@@ -19,7 +19,7 @@ data class SectorListModel (
     val DestinationImage: String?,
 
     @SerializedName("IsActive")
-    var IsActive: Boolean? = false
+    var IsActive: Boolean? = false,
 
     @SerializedName("isSelected")
     var isSelected: Boolean? = false

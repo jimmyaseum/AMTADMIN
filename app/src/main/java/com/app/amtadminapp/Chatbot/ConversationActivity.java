@@ -278,9 +278,6 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
 
         String messageText = userMessageInput.getText().toString();
 
-        final String messageText = userMessageInput.getText().toString();
-
-
         if (TextUtils.isEmpty(messageText)) {
             Toast.makeText(this, "Please write message first...", Toast.LENGTH_SHORT).show();
         } else {
@@ -394,8 +391,6 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this,R.style.SheetDialog);
 
-        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this,R.style.SheetDialog);
-
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_dialog);
 
         LinearLayout Select_Image = bottomSheetDialog.findViewById(R.id.Select_Image);
@@ -450,51 +445,50 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
             UploadImage(data);
         } else */
 
-        if(requestCode == 111) {
+        if (requestCode == 111) {
             if (resultCode == RESULT_OK && data != null) {
                 ImagePaths = new ArrayList();
                 ImagePaths.addAll(data.getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
 
-         if(requestCode == 111) {
-            if (resultCode == RESULT_OK && data != null) {
-                ImagePaths = new ArrayList();
+                if (requestCode == 111) {
+                    if (resultCode == RESULT_OK && data != null) {
+                        ImagePaths = new ArrayList();
 //                ImagePaths.addAll(data.getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
-                ImagePaths.addAll(data.<Uri>getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
+                        ImagePaths.addAll(data.<Uri>getParcelableArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
 
-                Uri PassportPath = ImagePaths.get(0);
-                CropImage.activity(PassportPath)
-                        .setGuidelines(CropImageView.Guidelines.ON)
-                        .start(this);
-            }
-        } else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == Activity.RESULT_OK) {
-                Uri resultUri = result.getUri();
-                if (isConnectivityAvailable(this)) {
-                    fileUri = Uri.fromFile(new File(resultUri.getPath()));
-                    UploadFileOnFCM();
-                } else {
-                    Toast.makeText(this, getString(R.string.str_msg_no_internet), Toast.LENGTH_SHORT).show();
+                        Uri PassportPath = ImagePaths.get(0);
+                        CropImage.activity(PassportPath)
+                                .setGuidelines(CropImageView.Guidelines.ON)
+                                .start(this);
+                    }
+                } else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+                    CropImage.ActivityResult result = CropImage.getActivityResult(data);
+                    if (resultCode == Activity.RESULT_OK) {
+                        Uri resultUri = result.getUri();
+                        if (isConnectivityAvailable(this)) {
+                            fileUri = Uri.fromFile(new File(resultUri.getPath()));
+                            UploadFileOnFCM();
+                        } else {
+                            Toast.makeText(this, getString(R.string.str_msg_no_internet), Toast.LENGTH_SHORT).show();
+                        }
+                    } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                        Toast.makeText(this, "No apps can perform this action.", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (requestCode == 104) {
+                    if (resultCode == RESULT_OK && data != null) {
+                        Uri sUri = data.getData();
+                        String sPath = sUri.getPath();
+                        fileUri = Uri.fromFile(fileFromContentUri4("passport", this, sUri));
+                        UploadFileOnFCM();
+                    }
+                } else if (requestCode == 438) {
+                    if (resultCode == RESULT_OK && data != null) {
+                        Uri sUri = data.getData();
+                        String sPath = sUri.getPath();
+                        fileUri = Uri.fromFile(fileFromContentUri4("passport", getApplicationContext(), sUri));
+                        UploadFileOnFCM();
+                    }
                 }
-            }
-            else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-                Toast.makeText(this, "No apps can perform this action.", Toast.LENGTH_SHORT).show();
-            }
-        }
-        else if(requestCode == 104) {
-            if (resultCode == RESULT_OK && data != null) {
-                Uri sUri = data.getData();
-                String sPath = sUri.getPath();
-                fileUri = Uri.fromFile(fileFromContentUri4("passport", this, sUri));
-                UploadFileOnFCM();
-            }
-        }
-        else if(requestCode == 438) {
-            if (resultCode == RESULT_OK && data != null) {
-                Uri sUri = data.getData();
-                String sPath = sUri.getPath();
-                fileUri = Uri.fromFile(fileFromContentUri4("passport", getApplicationContext(), sUri));
-                UploadFileOnFCM();
             }
         }
     }
@@ -562,13 +556,8 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Documents Files");
 
-
         String messageSenderRef = "Messages/" + currentUsetID + "/" + messageReceiverID;
         String messageReceiverRef = "Messages/" + messageReceiverID + "/" + currentUsetID;
-
-        final String messageSenderRef = "Messages/" + currentUsetID + "/" + messageReceiverID;
-        final String messageReceiverRef = "Messages/" + messageReceiverID + "/" + currentUsetID;
-
 
         DatabaseReference userMessageKeyRef = RootRef.child("Messages")
                 .child(currentUsetID).child(messageReceiverID).push();
@@ -577,11 +566,6 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
         String messagePushID = userMessageKeyRef.getKey();
 
         StorageReference filePath = storageReference.child(messagePushID + "." + "jpg");
-
-        final String messagePushID = userMessageKeyRef.getKey();
-
-        final StorageReference filePath = storageReference.child(messagePushID + "." + "jpg");
-
 
         uploadTask = filePath.putFile(fileUri);
         uploadTask.continueWithTask(new Continuation() {
@@ -631,8 +615,6 @@ public class ConversationActivity extends AppCompatActivity implements EasyPermi
 
 
     private void GetUsetInfo(String msg) {
-
-    private void GetUsetInfo(final String msg) {
 
         RootRef.child(ChatConstant.F_CUSTOMER).child(messageReceiverID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
