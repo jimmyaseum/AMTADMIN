@@ -784,7 +784,6 @@ class TourInfoFragment(var state: String) : BaseFragment(), RecyclerMultipleItem
                 views!!.etTotalCost.setText(finalAmount.toInt().toString())
             }
         }
-
     }
 
     private fun setDefaultData() {
